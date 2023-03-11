@@ -93,12 +93,12 @@ Kubelet certificate needs to be signed by cluster Certificate Authority (or disa
 spec:
   containers:
   - args:
-	- --cert-dir=/tmp
-	- --secure-port=4443
-	- --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
-	- --kubelet-use-node-status-port
-	- --metric-resolution=15s
-	- --kubelet-insecure-tls
+    - --cert-dir=/tmp
+    - --secure-port=4443
+    - --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
+    - --kubelet-use-node-status-port
+    - --metric-resolution=15s
+    - --kubelet-insecure-tls
 ```
 
 再次部署文件：
