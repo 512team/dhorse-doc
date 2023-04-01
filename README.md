@@ -1,2 +1,5 @@
-# dhorse-doc
-DHorse项目的文档
+# 项目地址
+
+* [GitHub](https://github.com/tiandizhiguai/dhorse)
+
+* [Gitee](https://gitee.com/tiandizhiguai/dhorse)
