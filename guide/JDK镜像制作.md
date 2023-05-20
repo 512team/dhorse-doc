@@ -29,7 +29,7 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 docker build -t 192.168.109.134:20080/dhorse/jdk:11.0.16.1 .
 ```
 
-其中，192.168.109.134:20080是镜像仓库地址，如Harbor地址，dhorse是项目名。
+其中，192.168.109.134:20080是镜像仓库地址，如Harbor地址，dhorse是项目名，必须要按照以上格式定义镜像的名称
 
 6. 登录仓库
 
