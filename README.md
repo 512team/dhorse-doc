@@ -1,5 +1,5 @@
 # 项目地址
 
-* [GitHub](https://github.com/tiandizhiguai/dhorse)
+* [GitHub](https://github.com/512team/dhorse)
 
-* [Gitee](https://gitee.com/tiandizhiguai/dhorse)
+* [Gitee](https://gitee.com/i512team/dhorse)
