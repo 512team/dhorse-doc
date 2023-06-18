@@ -223,14 +223,14 @@ kubeadm join 192.168.109.130:6443 --token osh87v.zvo010kamsr8esmp \
 1.笔者用的是root用户，仅在master节点执行
 
 ```shell
-vim /etc/profile
+[root@centos01 opt]# vim /etc/profile
 #在最后一行增加
 export KUBECONFIG=/etc/kubernetes/admin.conf
 ```
 
 生效环境变量
 ```shell
-source /etc/profile
+[root@centos01 opt]# source /etc/profile
 ```
 
 2.安装网络插件，可以选择calico或flannel，这里选择安装flannel，仅在master节点执行
@@ -238,15 +238,30 @@ source /etc/profile
 下载安装文件
 
 ```shell
-wget https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
-vim kube-flannel.yml
+[root@centos01 opt]# wget https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+```
+
+修改配置
+
+```shell
+[root@centos01 opt]# vim kube-flannel.yml
 #和--pod-network-cidr的一样
 "Network": "10.244.0.0/16"
+#由于有时国内网络的问题，需要把所有的docker.io地址改为dockerproxy.com
+#改过之后的效果如：dockerproxy.com/flannel/flannel:v0.22.0
 ```
 
 安装网络插件
 ```shell
-kubectl apply -f kube-flannel.yml
+[root@centos01 opt]# kubectl apply -f kube-flannel.yml
+```
+
+验证安装
+```
+[root@centos01 opt]# kubectl get pods -n kube-flannel
+NAME                    READY   STATUS    RESTARTS       AGE
+kube-flannel-ds-dfngh   1/1     Running   17 (13m ago)   6d1h
+kube-flannel-ds-qll8g   1/1     Running   12 (13m ago)   6d1h
 ```
 
 3.其他节点加入集群，非master节点都执行
