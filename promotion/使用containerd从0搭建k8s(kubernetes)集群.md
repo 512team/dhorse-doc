@@ -124,7 +124,7 @@ wget https://github.com//opencontainers/runc/releases/download/v1.1.7/runc.amd64
 chmod +x runc.amd64
 ```
 
-##### 查找containerd安装时已安装的runc所在的位置
+##### 查找containerd安装时已安装的runc所在的位置，如果不存在runc文件，则直接进行下一步
 
 ```shell
 [root@centos01 opt]# which runc
@@ -245,10 +245,12 @@ export KUBECONFIG=/etc/kubernetes/admin.conf
 
 ```shell
 [root@centos01 opt]# vim kube-flannel.yml
-#和--pod-network-cidr的一样
+#修改Network项的值，改为和--pod-network-cidr一样的值
 "Network": "10.244.0.0/16"
-#由于有时国内网络的问题，需要把所有的docker.io地址改为dockerproxy.com
-#改过之后的效果如：dockerproxy.com/flannel/flannel:v0.22.0
+#由于有时国内网络的问题，需要修改image的地址，把所有的docker.io改为dockerproxy.com
+#共需要修改3处，两个值
+image: dockerproxy.com/flannel/flannel:v0.22.0
+image: dockerproxy.com/flannel/flannel-cni-plugin:v1.1.2
 ```
 
 安装网络插件
