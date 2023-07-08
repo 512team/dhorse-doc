@@ -3,7 +3,7 @@
 在目标集群上，执行如下命令：
 
 ```shell
-kubectl apply -f https://gitee.com/i512team/dhorse/raw/main/conf/kubernetes-prometheus.yaml
+kubectl apply -f https://gitee.com/i512team/dhorse/raw/main/conf/kubernetes-prometheus.yml
 ```
 
 ##### 使用
