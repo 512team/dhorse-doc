@@ -17,7 +17,7 @@ EXPOSE 8080
 CMD $WORKHOME/tomcat/bin/catalina.sh run
 ```
 
-其中192.168.109.134:20080/dhorse/jdk:11.0.16.1镜像的制作，见[这里]()。
+其中192.168.109.134:20080/dhorse/jdk:11.0.16.1镜像的制作，见[这里](https://gitee.com/i512team/dhorse-doc/blob/main/guide/JDK%E9%95%9C%E5%83%8F%E5%88%B6%E4%BD%9C.md)。
 
 4. /opt/tomcat目下的文件内容如下：
 
