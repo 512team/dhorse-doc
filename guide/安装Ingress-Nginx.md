@@ -1,4 +1,4 @@
-目前，DHorse只支持Ingress-nginx的Ingress实现，下面介绍Ingress-nginx的安装过程。
+目前，DHorse([https://gitee.com/i512team/dhorse](https://gitee.com/i512team/dhorse))只支持Ingress-nginx的Ingress实现，下面介绍Ingress-nginx的安装过程。
 
 #### 下载安装文件
 

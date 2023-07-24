@@ -3,14 +3,19 @@
 首先以SpringBoot应用为例介绍一下k8s的发布步骤。
 
 1.从代码仓库下载代码，比如GitLab；
+
 2.接着是进行打包，比如使用Maven；
+
 3.编写Dockerfile文件，把步骤2产生的包制作成镜像；
+
 4.上传步骤3的镜像到远程仓库，比如Harhor；
+
 5.编写Deployment文件；
+
 6.提交Deployment文件到k8s集群；
 
 从以上步骤可以看出，发布需要的工具和环境至少包括：代码仓库（GitLab）、打包环境（Maven）、镜像制作（Docker）、镜像仓库（Harbor）、k8s集群等。
-当前，也可以借助一些开源的系统来发布你的应用，比如：Jenkins、[DHorse](https://github.com/tiandizhiguai/dhorse)等。
+当前，也可以借助一些开源的系统来发布你的应用，比如：Jenkins、DHorse([https://gitee.com/i512team/dhorse](https://gitee.com/i512team/dhorse))等。
 
 # 详细步骤
 
@@ -116,4 +121,5 @@ hello-79d56dc985-7dz6q   1/1     Running   0          8s    10.32.1.180   centos
 curl http://10.32.1.180:8080/hello
 ```
 
-至此，发布结束，同时欢迎使用[DHorse](https://github.com/tiandizhiguai/dhorse)进行自动发布。
+推荐一个发布平台，DHorse([https://gitee.com/i512team/dhorse](https://gitee.com/i512team/dhorse))
+
