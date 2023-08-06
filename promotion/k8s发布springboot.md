@@ -121,6 +121,6 @@ springboot-79d56dc985-7dz6q   1/1     Running   0          8s    10.32.1.180   c
 curl http://10.32.1.180:8080/hello
 ```
 
-推荐一个不错的部署应用的工具，[https://gitee.com/i512team/dhorse](https://gitee.com/i512team/dhorse)
+推荐一个不错的部署应用的工具，[https://github.com/512team/dhorse](https://github.com/512team/dhorse)
 
 至此，发布结束。

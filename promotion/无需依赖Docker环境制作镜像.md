@@ -57,7 +57,7 @@ mvn compile jib:build
 </dependency>
 ```
 
-下面通过[DHorse](https://github.com/tiandizhiguai/dhorse)的代码，看Jib-core是如何使用的，如下：
+下面通过[DHorse](https://github.com/512team/dhorse)的代码，看Jib-core是如何使用的，如下：
 
 ```java
 try {
@@ -93,4 +93,4 @@ try {
 
 如果你的项目有此需求，也可以通过Jib-core来实现。
 
-可以通过[DHorse](https://github.com/tiandizhiguai/dhorse)了解更多。
+可以通过[DHorse](https://github.com/512team/dhorse)了解更多。
