@@ -66,7 +66,7 @@ make install
 ##### 启动nginx
 
 ```shell
- cd  /usr/local/nginx/sbin
+cd /usr/local/nginx/sbin
 ./nginx
 ```
 
