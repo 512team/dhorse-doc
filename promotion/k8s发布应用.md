@@ -121,4 +121,6 @@ hello-79d56dc985-7dz6q   1/1     Running   0          8s    10.32.1.180   centos
 curl http://10.32.1.180:8080/hello
 ```
 
-至此，发布结束，同时欢迎使用[https://github.com/512team/dhorse](https://github.com/512team/dhorse)进行自动发布。
+推荐一个不错的部署应用的工具，[https://github.com/512team/dhorse](https://github.com/512team/dhorse)
+
+至此，发布结束。
