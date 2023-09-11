@@ -93,4 +93,5 @@ try {
 
 如果你的项目有此需求，也可以通过Jib-core来实现。
 
-可以通过[https://github.com/512team/dhorse](https://github.com/512team/dhorse)了解更多。
+最后，推荐一个部署应用的平台: [https://github.com/512team/dhorse](https://github.com/512team/dhorse)
+演示地址：[http://dhorse-demo2.512.team](http://dhorse-demo2.512.team)

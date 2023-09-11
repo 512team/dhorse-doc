@@ -121,6 +121,5 @@ hello-79d56dc985-7dz6q   1/1     Running   0          8s    10.32.1.180   centos
 curl http://10.32.1.180:8080/hello
 ```
 
-推荐一个不错的部署应用的工具，[https://github.com/512team/dhorse](https://github.com/512team/dhorse)
-
-至此，发布结束。
+最后，推荐一个部署应用的平台: [https://github.com/512team/dhorse](https://github.com/512team/dhorse)
+演示地址：[http://dhorse-demo2.512.team](http://dhorse-demo2.512.team)

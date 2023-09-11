@@ -30,4 +30,5 @@ docker login 192.0.10.22:20080 -u admin -p Harbor12345
 docker push 192.0.10.22:20080/dhorse/springboot:1.0.0
 ```
 
-最后，推荐一个不错的部署应用的工具，DHorse([https://github.com/512team/dhorse](https://github.com/512team/dhorse))
+最后，推荐一个部署应用的平台: [https://github.com/512team/dhorse](https://github.com/512team/dhorse)
+演示地址：[http://dhorse-demo2.512.team](http://dhorse-demo2.512.team)

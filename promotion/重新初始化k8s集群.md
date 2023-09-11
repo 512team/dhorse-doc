@@ -119,4 +119,5 @@ kube-scheduler-centos01            1/1     Running   0          9m18s
 
 重启一遍所有服务器节点，有可能会暴露出来隐藏的问题，再次验证以上结果，仍然正常。
 
-最后，推荐一个发布应用的平台[https://github.com/512team/dhorse](https://github.com/512team/dhorse)，是一个以应用为中心的云原生DevOps系统，能够实现持续集成、持续部署、微服务治理等功能，主要特点：部署简单、操作简洁、功能快速。
+最后，推荐一个部署应用的平台: [https://github.com/512team/dhorse](https://github.com/512team/dhorse)
+演示地址：[http://dhorse-demo2.512.team](http://dhorse-demo2.512.team)
