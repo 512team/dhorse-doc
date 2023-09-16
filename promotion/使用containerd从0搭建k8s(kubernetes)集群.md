@@ -297,4 +297,5 @@ kube-scheduler-centos01            1/1     Running   0          9m18s
 建议重启一遍所有服务器节点，有可能会暴露出来隐藏的问题，再次验证以上结果，仍然正常。
 
 最后，推荐一个部署应用的平台: [https://github.com/512team/dhorse](https://github.com/512team/dhorse)
+
 演示地址：[http://dhorse-demo2.512.team](http://dhorse-demo2.512.team)
