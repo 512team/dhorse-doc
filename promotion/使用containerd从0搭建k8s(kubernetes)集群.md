@@ -1,3 +1,5 @@
+完成安装k8s集群以后，推荐使用[https://github.com/512team/dhorse](https://github.com/512team/dhorse)发布应用。
+
 ## 准备环境
 
 准备两台服务器节点，如果需要安装虚拟机，可以参考[《wmware和centos安装过程》](https://blog.csdn.net/huashetianzu/article/details/109510266)
