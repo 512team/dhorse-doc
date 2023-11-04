@@ -1,5 +1,5 @@
 ## 现状
-在dhorse 1.4.0版本之前，一直使用k8s官方提供的sdk与k8s集群交互，官方sdk的Maven坐标如下：
+在[dhorse](https://github.com/512team/dhorse) 1.4.0版本之前，一直使用k8s官方提供的sdk与k8s集群交互，官方sdk的Maven坐标如下：
 
 ```xml
 <dependency>
