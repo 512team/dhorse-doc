@@ -13,7 +13,7 @@
 ##### 设置主机名，所有节点都执行
 
 ```shell
-vim /etc/hosts
+[root@centos01 opt]# vim /etc/hosts
 #增加
 192.168.109.130 centos01
 192.168.109.131 centos02
@@ -22,10 +22,10 @@ vim /etc/hosts
 ##### 关闭防火墙，所有节点都执行
 
 ```shell
-systemctl stop firewalld
-systemctl disable firewalld
-setenforce 0
-vim /etc/selinux/config
+[root@centos01 opt]# systemctl stop firewalld
+[root@centos01 opt]# systemctl disable firewalld
+[root@centos01 opt]# setenforce 0
+[root@centos01 opt]# vim /etc/selinux/config
 #修改SELINUX的值
 SELINUX=disabled
 ```
@@ -33,8 +33,8 @@ SELINUX=disabled
 ##### 关闭swap内存，所有节点都执行
 
 ```shell
-swapoff -a
-vim /etc/fstab
+[root@centos01 opt]# swapoff -a
+[root@centos01 opt]# vim /etc/fstab
 # 将该行注释掉
 #/dev/mapper/cs-swap swap
 ```
@@ -43,7 +43,7 @@ vim /etc/fstab
 
 1.修改参数
 ```shell
-vim /etc/sysctl.conf
+[root@centos01 opt]# vim /etc/sysctl.conf
 net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables 	= 1
 net.ipv4.ip_forward 				= 1
@@ -52,8 +52,8 @@ vm.swappiness 						= 0
 
 2.然后，加载如下两个模块，所有节点都执行
 ```shell
-modprobe ip_vs_rr
-modprobe br_netfilter
+[root@centos01 opt]# modprobe ip_vs_rr
+[root@centos01 opt]# modprobe br_netfilter
 ```
 
 3.生效配置
@@ -74,16 +74,16 @@ vm.swappiness = 0
 ##### 安装
 
 ```shell
-wget https://github.com/containerd/containerd/releases/download/v1.7.2/containerd-1.7.2-linux-amd64.tar.gz
-tar Cxzvf /usr/local containerd-1.7.2-linux-amd64.tar.gz
+[root@centos01 opt]# wget https://github.com/containerd/containerd/releases/download/v1.7.2/containerd-1.7.2-linux-amd64.tar.gz
+[root@centos01 opt]# tar Cxzvf /usr/local containerd-1.7.2-linux-amd64.tar.gz
 ```
 
 ##### 修改配置
 
 ```shell
-mkdir /etc/containerd
-containerd config default > /etc/containerd/config.toml
-vim /etc/containerd/config.toml
+[root@centos01 opt]# mkdir /etc/containerd
+[root@centos01 opt]# containerd config default > /etc/containerd/config.toml
+[root@centos01 opt]# vim /etc/containerd/config.toml
 #SystemdCgroup的值改为true
 SystemdCgroup = true
 #由于国内下载不到registry.k8s.io的镜像，修改sandbox_image的值为：
@@ -93,11 +93,11 @@ sandbox_image = "registry.aliyuncs.com/google_containers/pause:3.9"
 ##### 启动服务
 
 ```shell
-mkdir -p /usr/local/lib/systemd/system
-wget https://raw.githubusercontent.com/containerd/containerd/main/containerd.service
-mv containerd.service /usr/local/lib/systemd/system
-systemctl daemon-reload
-systemctl enable --now containerd
+[root@centos01 opt]# mkdir -p /usr/local/lib/systemd/system
+[root@centos01 opt]# wget https://raw.githubusercontent.com/containerd/containerd/main/containerd.service
+[root@centos01 opt]# mv containerd.service /usr/local/lib/systemd/system
+[root@centos01 opt]# systemctl daemon-reload
+[root@centos01 opt]# systemctl enable --now containerd
 ```
 
 ##### 验证安装
@@ -122,8 +122,8 @@ Server:
 
 ##### 准备文件
 ```
-wget https://github.com//opencontainers/runc/releases/download/v1.1.7/runc.amd64
-chmod +x runc.amd64
+[root@centos01 opt]# wget https://github.com//opencontainers/runc/releases/download/v1.1.7/runc.amd64
+[root@centos01 opt]# chmod +x runc.amd64
 ```
 
 ##### 查找containerd安装时已安装的runc所在的位置，如果不存在runc文件，则直接进行下一步
@@ -136,7 +136,7 @@ chmod +x runc.amd64
 ##### 替换上一步的结果文件
 
 ```shell
-mv -f runc.amd64 /usr/bin/runc
+[root@centos01 opt]# mv -f runc.amd64 /usr/bin/runc
 ```
 
 ##### 验证安装
@@ -154,6 +154,7 @@ libseccomp: 2.5.4
 ##### 添加阿里云的kubernetes源，所有节点都执行
 
 ```shell
+[root@centos01 opt]# 
 cat <<EOF > /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
 name=Kubernetes
@@ -163,17 +164,18 @@ gpgcheck=1
 repo_gpgcheck=1
 gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg
 EOF
+[root@centos01 opt]# 
 ```
 
 ##### 安装最新版，所有节点都执行
 
 ```shell
-yum install -y kubeadm kubelet kubectl
+[root@centos01 opt]# yum install -y kubeadm kubelet kubectl
 ```
 
 ##### 开机自启动，所有节点都执行
 ```shell
-systemctl enable kubelet
+[root@centos01 opt]# systemctl enable kubelet
 ```
 
 ##### 验证安装，所有节点都执行
