@@ -10,7 +10,7 @@
 acme.sh --issue --dns dns_ali -d 512.team -d *.512.team --server letsencrypt
 ```
 
-执行完以上命令以后，会输出证书的路径，如下：
+其中，512.team和*.512.team是你的域名。执行完以上命令以后，会输出证书的路径，如下：
 
 ```shell
 [Sat Oct 12 20:48:16 CST 2024] Your cert is in: /root/.acme.sh/512.team_ecc/512.team.cer
