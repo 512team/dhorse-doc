@@ -1,6 +1,7 @@
 ### 安装工具
 
 [参考这里](https://blog.csdn.net/weixin_45602663/article/details/126631496)
+或[这里](https://github.com/acmesh-official/acme.sh/wiki/How-to-install#3-or-git-clone-and-install)
 
 ### 生成证书
 
