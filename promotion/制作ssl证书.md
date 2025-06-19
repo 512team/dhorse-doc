@@ -21,3 +21,8 @@ acme.sh --issue --dns dns_ali -d 512.team -d *.512.team --server letsencrypt
 ```
 
 其中，fullchain.cer文件是证书的内容，512.team.key文件是证书的秘钥。
+
+###
+也可以使用cerbot工具生成，参考：
+https://blog.csdn.net/baidu_21349635/article/details/143436397
+https://finisky.github.io/certbot-automating-nginx-ssl-renewal/
